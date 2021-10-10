@@ -1,9 +1,9 @@
 # Task : Create React components with props
 
 In this task we are going to build a small application that shows a list of users in nicely designed cards.
-You can use the listUsers.js array included in this repo to use the generated data. 
+You can use the `listUsers.js` and use the array to generate the items. 
 
-## Task 1 - Creat react app 
+## Task 1 - Create react app setup
 
 1. Create a new folder called my `props-assignment-react`
  
@@ -40,14 +40,14 @@ const ExampleComponent = ({propname}) => {
 export default ExampleComponent;
    ```
 ## Task 3 - Create a component that shows a list of usercards
-In this part of the assignment we want to build a component that displays the usercards in a list. This can be in a grid, or in a one column list. The choice is fully yours. 
+In this part of the assignment we want to build a component that displays the usercards in a list. This can be in a grid, or in any style you like, the choice is fully yours. 
 Make sure the component accepts a `users` as a prop.  
 
 1. Create a new folder called  `UserList`.
 2. Create a new file `index.js` inside the `UserList` folder. 
 3. Write out the component. You can use the following snippet for help : 
  ```javascript
-const ExampleComponent = () => {
+const ExampleComponent = ({propName}) => {
     return (
     
     );
@@ -57,10 +57,22 @@ export default ExampleComponent;
  4. Import the `UserCard` component.
  5. Make sure to display a card for each item inside `users`. You can use the following snippet as an example of how to list multiple components: 
  ```javascript
-{postItems.map((post, index)=> {
+{users.map((item, index)=> {
             return (
-               <Post post={post} key={index} />
+               <User user={item} key={index} />
             );
 })}
 
  ```
+## Task 4 - Wire up everything together 
+1. Import the `UserList` component inside `App.js`.
+2. Import the users array from `listUsers.js` inside `App.js`
+ ```javascript
+   import {users} from './listUsers'
+ ```
+
+3. Configure the `UserList` component so it takes the array inside listUsers as a prop. Example :
+ ```javascript
+   <UserList users={users} />
+ ```
+
