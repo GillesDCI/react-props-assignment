@@ -19,7 +19,7 @@ In this part of the assignment we are going to build a card that displays the us
 1. Create new folder `components` inside the `src` folder. 
 2. Create a new folder called  `UserCard`.
 3. Create a new file `index.js` inse the `UserCard` folder. 
-4. Write out the component. Make sure the component shows the name of the user and the age of the user. You can use the following snippet as a help: 
+4. Write out the component. Make sure the component shows the name of the user and the description of the user. You can use the following snippet as a help: 
  ```javascript
 const ExampleComponent = () => {
     return (
