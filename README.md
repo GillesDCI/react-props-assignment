@@ -71,7 +71,7 @@ export default ExampleComponent;
    import {users} from './listUsers'
  ```
 
-3. Configure the `UserList` component so it takes the array inside listUsers as a prop. Example :
+3. Configure the `UserList` component so it takes the array inside `listUsers.js` as a prop. Example :
  ```javascript
    <UserList users={users} />
  ```
